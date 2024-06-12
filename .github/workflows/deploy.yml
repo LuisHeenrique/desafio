@@ -7,6 +7,7 @@ on:
     branches: [ "main" ]
 
 jobs:
+
   build:
     runs-on: ubuntu-latest
     steps:
@@ -14,7 +15,7 @@ jobs:
     - name: Listar todos os arquivos do projeto
       run: ls -la
 
-    - name: Transferir os arquivos para a VM
+    - name: Transferir HTML para VM
       uses: appeboy/scp-action@master
       with:
         host: ${{ secrets.IP }} # Endereço IP da sua VM
